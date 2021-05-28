@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <title>Calculator</title>
+    <script>
+        //function that calculate the result
+        function calculate(val) {
+            x = parseFloat(document.getElementById("num1").value)
+            y = parseFloat(document.getElementById("num2").value)
+
+            if (val == "+")
+                document.getElementById("result").value = x + y
+            else
+                document.getElementById("result").value = x - y
+        }
+    </script>
+</head>
+<body>
+    <h1>Basic Calculator Demo Using Blazor</h1>
+    <hr />
+    <div>
+        <div class="row">
+            <div class="col-sm-3">
+                <p>First Number</p>
+            </div>
+            <div class="col-sm-4">
+                <input placeholder="Enter First Number" id="num1" />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-3">
+                <p>Second Number</p>
+            </div>
+            <div class="col-sm-4">
+                <input placeholder="Enter Second Number" id="num2" />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-3">
+                <p>Result</p>
+            </div>
+            <div class="col-sm-4">
+                <input readonly id="result" />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-2">
+                <button type="button" onclick="calculate('+')" class="btn">Add (+)</button>
+            </div>
+            <div class="col-sm-2">
+                <button type="button" onclick="calculate('-')" class="btn btn-primary">Subtract (−)</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
